@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Array {
     private final int n=10;
     private final Scanner sc=new Scanner(System.in);
-    private final int[] array= new int[n];
+    private int[] array= new int[n];
     private int max=Integer.MIN_VALUE;
     private int min=Integer.MAX_VALUE;
     private float avg =0;
@@ -92,4 +92,24 @@ public class Array {
             }
         }
     }
+    public void delete_num(){
+        int offset = 0;
+        System.out.print("Enter number to delete:");
+        Scanner sc = new Scanner(System.in);
+        int val = sc.nextInt();
+
+        for(int i = 0; i< array.length; i++){
+            if(array[i] == val){
+                offset++;
+            }
+            else{
+                array[i - offset] = array[i];
+            }
+        }
+        int[] newArray = new int[array.length - offset];
+        System.arraycopy(array, 0, newArray, 0, newArray.length);
+        array = newArray;
+    }
 }
+
+

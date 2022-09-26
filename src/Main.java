@@ -9,11 +9,12 @@ public class Main {
                 2-Print array
                 3-Find max element in array
                 4-Find min element in array
-                5-Sort up array
-                6-Sort down array
-                7-Find average num of array
-                8-find prime num in array
-                9-help menu
+                5-Find average num of array
+                6-Delete num, that equals to selected
+                7-Sort up array
+                8-Sort down array
+                9-find prime num in array
+                10-help menu
                 0-exit""");
     }
     public static void main(String[] args) {
@@ -30,19 +31,20 @@ public class Main {
                 case 2 -> A.print_array();
                 case 3 -> A.find_max();
                 case 4 -> A.find_min();
-                case 5 -> {
+                case 5 -> A.find_avg();
+                case 6 -> A.delete_num();
+                case 7 -> {
                     System.out.println("Sort up array");
                     A.sort_up_array();
                     A.print_array();
                 }
-                case 6 -> {
+                case 8 -> {
                     System.out.println("Sort down array");
                     A.sort_down_array();
                     A.print_array();
                 }
-                case 7 -> A.find_avg();
-                case 8 -> A.prime_num();
-                case 9 -> Menu();
+                case 9 -> A.prime_num();
+                case 10 -> Menu();
                 case 0 -> {
                     fl = false;
                     System.out.print("Goodbye!");

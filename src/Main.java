@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void Menu() {
-        System.out.println("Menu:");
+        System.out.println("Help menu:");
         System.out.print("""
                 1-Enter array
                 2-Print array
